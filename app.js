@@ -27,6 +27,8 @@ app.get('/types', (req, res) => {
 
 app.get('/list/:id', (req, res) => {
     var data = [];
+
+    //通过try catch做异常捕获处理
     try{
       data = JSON.parse(fs.readFileSync(`./data/book_${req.params.id}.json`).toString());
     }
