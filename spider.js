@@ -27,8 +27,9 @@ bookTypes.forEach(function(item){
  */
 function loadData(baseUrl,type,pageCount){
   var arrBook = []
+  var page = 1
   // getData('http://bang.dangdang.com/books/newhotsales/01.41.00.00.00.00-24hours-0-0-1-', 1)
-  getData(baseUrl,1);
+  getData(baseUrl,page);
   function getData(url, page) {
       c.queue([{
           uri: url + page,
