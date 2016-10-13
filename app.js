@@ -46,6 +46,10 @@ app.get('/list/:id', (req, res) => {
     });
 })
 
+app.get('/api/get_types',(req,res)=>{
+  res.json({status:'y',msg:'获取数据成功',data:bookTypes});
+})
+
 
 
 app.listen(3000, () => {
